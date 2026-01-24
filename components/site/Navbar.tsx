@@ -1,7 +1,7 @@
 ﻿"use client";
 
 import Link from "next/link";
-import { ShoppingBag, MessageCircle } from "lucide-react";
+import { ShoppingBag, MessageCircle, Gem } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useCart } from "@/components/cart/CartProvider";
 
@@ -12,8 +12,9 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-40 border-b border-ink/10 bg-white/80 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link href="/" className="font-display text-lg font-semibold text-ink">
-          MHIDEY&apos;S HUB💎💕
+        <Link href="/" className="font-display flex items-center gap-2 text-lg font-semibold text-ink">
+          <Gem size={18} />
+          MHIDEY&apos;S HUB
         </Link>
         <nav className="hidden items-center gap-6 text-sm font-semibold text-ink md:flex">
           <Link href="/shop" className="hover:text-slate-700">Shop</Link>

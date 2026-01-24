@@ -1,4 +1,5 @@
-﻿import Link from "next/link";
+import Link from "next/link";
+import { Gem } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function Hero() {
@@ -6,7 +7,10 @@ export default function Hero() {
     <section className="bg-hero-gradient py-20">
       <div className="mx-auto grid max-w-6xl gap-12 px-6 md:grid-cols-[1.1fr_0.9fr] md:items-center">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-ink/60">MHIDEY&apos;S HUB💎💕</p>
+          <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.3em] text-ink/60">
+            <Gem size={16} />
+            MHIDEY&apos;S HUB
+          </p>
           <h1 className="mt-4 font-display text-4xl font-semibold text-ink md:text-5xl">
             Affordable wears you’ll love.
           </h1>

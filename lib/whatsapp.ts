@@ -12,7 +12,7 @@ export function buildWhatsAppMessage(params: {
   note?: string;
 }) {
   const lines: string[] = [];
-  lines.push("Hello MHIDEY'S HUB💎💕! I want to order:");
+  lines.push("Hello MHIDEY'S HUB! I want to order:");
 
   params.items.forEach((item, index) => {
     const size = item.size ? ` - Size: ${item.size}` : "";

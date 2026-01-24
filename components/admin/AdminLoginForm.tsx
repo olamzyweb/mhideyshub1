@@ -3,6 +3,7 @@
 import { signIn } from "next-auth/react";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
@@ -10,17 +11,24 @@ export default function AdminLoginForm({ error }: { error?: string }) {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
-    const res = await signIn("credentials", {
-      redirect: false,
-      email,
-      password
-    });
-    if (res?.ok) {
-      router.push("/admin");
-      router.refresh();
+    if (isSubmitting) return;
+    setIsSubmitting(true);
+    try {
+      const res = await signIn("credentials", {
+        redirect: false,
+        email,
+        password
+      });
+      if (res?.ok) {
+        router.push("/admin");
+        router.refresh();
+      }
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -34,8 +42,15 @@ export default function AdminLoginForm({ error }: { error?: string }) {
           <Input type="email" placeholder="Email" value={email} onChange={(event) => setEmail(event.target.value)} />
           <Input type="password" placeholder="Password" value={password} onChange={(event) => setPassword(event.target.value)} />
         </div>
-        <Button className="mt-6 w-full" type="submit">
-          Sign in
+        <Button className="mt-6 w-full" type="submit" disabled={isSubmitting}>
+          {isSubmitting ? (
+            <>
+              <Loader2 className="animate-spin" size={16} />
+              Signing in...
+            </>
+          ) : (
+            "Sign in"
+          )}
         </Button>
       </form>
     </div>

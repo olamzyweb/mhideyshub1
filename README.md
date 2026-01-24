@@ -1,4 +1,4 @@
-# MHIDEY'S HUB💎💕
+# MHIDEY'S HUB
 
 Affordable wears you’ll love. This is a Next.js + Prisma storefront with WhatsApp checkout and a simple admin dashboard.
 

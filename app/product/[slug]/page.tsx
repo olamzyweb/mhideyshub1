@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   if (!product) return { title: "Product not found" };
 
   return {
-    title: `${product.name} | MHIDEY'S HUB💎💕`,
+    title: `${product.name} | MHIDEY'S HUB`,
     description: product.description,
     openGraph: {
       title: product.name,

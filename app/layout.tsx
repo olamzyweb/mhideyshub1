@@ -18,10 +18,10 @@ const body = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "MHIDEY'S HUB💎💕 | Affordable wears you'll love",
+  title: "MHIDEY'S HUB | Affordable wears you'll love",
   description: "Affordable thrifted and new fashion for women and men in Nigeria.",
   openGraph: {
-    title: "MHIDEY'S HUB💎💕",
+    title: "MHIDEY'S HUB",
     description: "Affordable wears you’ll love.",
     type: "website"
   }
