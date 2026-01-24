@@ -13,7 +13,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-40 border-b border-ink/10 bg-white/80 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link href="/" className="font-display text-lg font-semibold text-ink">
-          MHIDEY'S HUB💎💕
+          MHIDEY&apos;S HUB💎💕
         </Link>
         <nav className="hidden items-center gap-6 text-sm font-semibold text-ink md:flex">
           <Link href="/shop" className="hover:text-slate-700">Shop</Link>

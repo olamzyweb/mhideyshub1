@@ -7,7 +7,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
           <div>
             <p className="text-xs uppercase tracking-widest text-ink/50">Admin</p>
-            <h1 className="font-display text-2xl font-semibold text-ink">MHIDEY'S HUB????</h1>
+            <h1 className="font-display text-2xl font-semibold text-ink">MHIDEY&apos;S HUB💎💕</h1>
           </div>
           <div className="flex gap-3 text-sm font-semibold">
             <Link href="/admin" className="hover:text-slate-700">Dashboard</Link>
