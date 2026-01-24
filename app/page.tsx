@@ -5,6 +5,8 @@ import FeaturedGrid from "@/components/site/FeaturedGrid";
 import WhyShop from "@/components/site/WhyShop";
 import Testimonials from "@/components/site/Testimonials";
 
+export const dynamic = "force-dynamic";
+
 export default async function HomePage() {
   const products = await prisma.product.findMany({
     where: { featured: true },
