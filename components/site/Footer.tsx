@@ -16,6 +16,14 @@ export default function Footer() {
         >
           <MessageCircle size={16} /> Join WhatsApp Group
         </a>
+        <a
+          href="https://olamzyweb.com.ng"
+          target="_blank"
+          rel="noreferrer"
+          className="text-xs font-semibold uppercase tracking-widest text-ink/50 hover:text-ink"
+        >
+          Developed by OLAMZYWEB
+        </a>
       </div>
     </footer>
   );

@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/site/Navbar";
 import Footer from "@/components/site/Footer";
 import Providers from "@/app/providers";
+import Script from "next/script";
 
 const display = Playfair_Display({
   subsets: ["latin"],
@@ -30,6 +31,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <Script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1160117710255795"
+        crossOrigin="anonymous"
+        strategy="afterInteractive"
+      />
       <body className={`${display.variable} ${body.variable} font-body`}>
         <Providers>
           <Navbar />
