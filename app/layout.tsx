@@ -5,6 +5,7 @@ import Navbar from "@/components/site/Navbar";
 import Footer from "@/components/site/Footer";
 import Providers from "@/app/providers";
 import Script from "next/script";
+import AdsterraBanner from "@/components/site/AdsterraBanner";
 
 const display = Playfair_Display({
   subsets: ["latin"],
@@ -44,8 +45,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${display.variable} ${body.variable} font-body`}>
         <Providers>
           <Navbar />
+          <div className="mx-auto max-w-6xl px-6">
+            <AdsterraBanner />
+          </div>
           <main>{children}</main>
+          <div className="mx-auto max-w-6xl px-6">
+            <AdsterraBanner />
+          </div>
           <Footer />
+          <div className="mx-auto max-w-6xl px-6 pb-8">
+            <AdsterraBanner />
+          </div>
         </Providers>
       </body>
     </html>
