@@ -3,6 +3,7 @@ import { prisma } from "@/lib/prisma";
 import ProductCard from "@/components/site/ProductCard";
 import { CATEGORY_LIST } from "@/lib/constants";
 import slugify from "slugify";
+import Script from "next/script";
 
 const PAGE_SIZE = 12;
 
@@ -71,6 +72,15 @@ export default async function ShopPage({
         </form>
       </div>
 
+      <div className="mt-8 flex justify-center">
+        <Script
+          async
+          src="https://pl28661475.effectivegatecpm.com/1e63cf5451ded5f9ffa8b6759219da06/invoke.js"
+          strategy="afterInteractive"
+        />
+        <div id="container-1e63cf5451ded5f9ffa8b6759219da06"></div>
+      </div>
+
       <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />
@@ -91,9 +101,8 @@ export default async function ShopPage({
               <Link
                 key={pageNumber}
                 href={`/shop?${params.toString()}`}
-                className={`flex h-9 w-9 items-center justify-center rounded-full border ${
-                  pageNumber === page ? "border-ink bg-ink text-white" : "border-ink/15"
-                }`}
+                className={`flex h-9 w-9 items-center justify-center rounded-full border ${pageNumber === page ? "border-ink bg-ink text-white" : "border-ink/15"
+                  }`}
               >
                 {pageNumber}
               </Link>

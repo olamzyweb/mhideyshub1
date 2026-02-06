@@ -37,6 +37,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         crossOrigin="anonymous"
         strategy="afterInteractive"
       />
+      <Script
+        src="https://pl28661471.effectivegatecpm.com/1b/7c/73/1b7c73ff6b866dd02eb481d83f6800ab.js"
+        strategy="afterInteractive"
+      />
       <body className={`${display.variable} ${body.variable} font-body`}>
         <Providers>
           <Navbar />
