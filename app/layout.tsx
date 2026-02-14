@@ -4,8 +4,8 @@ import "./globals.css";
 import Navbar from "@/components/site/Navbar";
 import Footer from "@/components/site/Footer";
 import Providers from "@/app/providers";
-import Script from "next/script";
-import AdsterraBanner from "@/components/site/AdsterraBanner";
+// import Script from "next/script";
+// import AdsterraBanner from "@/components/site/AdsterraBanner";
 
 const display = Playfair_Display({
   subsets: ["latin"],
@@ -32,30 +32,30 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <Script
+      {/* <Script
         async
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1160117710255795"
         crossOrigin="anonymous"
         strategy="afterInteractive"
-      />
-      <Script
+      /> */}
+      {/* <Script
         src="https://pl28661471.effectivegatecpm.com/1b/7c/73/1b7c73ff6b866dd02eb481d83f6800ab.js"
         strategy="afterInteractive"
-      />
+      /> */}
       <body className={`${display.variable} ${body.variable} font-body`}>
         <Providers>
           <Navbar />
-          <div className="mx-auto max-w-6xl px-6">
+          {/* <div className="mx-auto max-w-6xl px-6">
             <AdsterraBanner />
-          </div>
+          </div> */}
           <main>{children}</main>
-          <div className="mx-auto max-w-6xl px-6">
+          {/* <div className="mx-auto max-w-6xl px-6">
             <AdsterraBanner />
-          </div>
+          </div> */}
           <Footer />
-          <div className="mx-auto max-w-6xl px-6 pb-8">
+          {/* <div className="mx-auto max-w-6xl px-6 pb-8">
             <AdsterraBanner />
-          </div>
+          </div> */}
         </Providers>
       </body>
     </html>
